@@ -1,3 +1,7 @@
+# Modifications made by Bienenwolf655:
+- added scripts for finetuning of the pretrained weights and comnplete training with MLM Loss or with downstream classification loss
+- added scaling layers to change the embedding layer (with example in code) also with not fitting dim of embedding
+- added small classification head
 # Evolutionary Scale Modeling
 
 
