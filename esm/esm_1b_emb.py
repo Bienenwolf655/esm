@@ -62,7 +62,7 @@ class EmbBenchProtBert(nn.Module):
             )
 
     def weights_from_pretrained(self, pretrained_model):
-        pretrained_dict = nn.Sequential(*list(pretrained_model.children())[:1]).state_dict()
+        pretrained_dict = nn.Sequential(*list(pretrained_model.children())[1:]).state_dict()
         model_dict = self.state_dict()
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
         model_dict.update(pretrained_dict)
